@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.9.14"
+                id="RMAppModule_AssignmentsVOResources" Package="RM.RESTmodel.entities.rest.v1" usageMode="RESTClient">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="AssignmentsVO1" RangeSize="5" DataControl="RMAppModuleDataControl" id="AssignmentsVO1Iter"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="AssignmentsVO1Iter" id="Assignments" AccessorFolder="Always">
+      <nodeDefinition DefName="RM.RESTmodel.views.AssignmentsVO" Name="RM.RESTmodel.views.AssignmentsVO"/>
+    </tree>
+  </bindings>
+</pageDefinition>

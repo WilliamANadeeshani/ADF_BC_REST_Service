@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="PeopleAssinmentRelationAssoc1Link"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  EntityAssociation="RM.RESTmodel.entities.PeopleAssinmentRelationAssoc1">
+  <ViewLinkDefEnd
+    Name="PeopleVO"
+    Cardinality="1"
+    Source="true"
+    Owner="RM.RESTmodel.views.PeopleVO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_minCardinality" Value="1"/>
+      <Attr Name="_finderName" Value="PeopleVO"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="RM.RESTmodel.views.PeopleVO.PersonId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="AssignmentsVO1"
+    Cardinality="-1"
+    Owner="RM.RESTmodel.views.AssignmentsVO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="AssignmentsVO1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="RM.RESTmodel.views.AssignmentsVO.PersonId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>

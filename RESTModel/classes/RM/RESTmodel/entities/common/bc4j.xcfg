@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!---->
+<BC4JConfig xmlns="http://xmlns.oracle.com/bc4j/configuration" version="11.1">
+  <AppModuleConfigBag ApplicationName="RM.RESTmodel.entities.RMAppModule">
+    <AppModuleConfig name="RMAppModuleLocal" jbo.project="RM.RESTmodel.RESTModel"
+                     ApplicationName="RM.RESTmodel.entities.RMAppModule" DeployPlatform="LOCAL">
+      <Database jbo.TypeMapEntries="Java" jbo.sql92.JdbcDriverClass="com.mysql.jdbc.Driver"
+                JDBCDataSource="java:comp/env/jdbc/XAMPP_RMDS" jbo.SQLBuilder="SQL92"/>
+      <Security AppModuleJndiName="RM.RESTmodel.entities.RMAppModule"/>
+    </AppModuleConfig>
+    <AppModuleConfig name="RMAppModuleShared" jbo.project="RM.RESTmodel.RESTModel"
+                     ApplicationName="RM.RESTmodel.entities.RMAppModule" DeployPlatform="LOCAL">
+      <AM-Pooling jbo.ampool.maxpoolsize="1" jbo.ampool.isuseexclusive="false"/>
+      <Database jbo.TypeMapEntries="Java" jbo.sql92.JdbcDriverClass="com.mysql.jdbc.Driver"
+                JDBCDataSource="java:comp/env/jdbc/XAMPP_RMDS" jbo.SQLBuilder="SQL92"/>
+      <Security AppModuleJndiName="RM.RESTmodel.entities.RMAppModule"/>
+    </AppModuleConfig>
+  </AppModuleConfigBag>
+</BC4JConfig>

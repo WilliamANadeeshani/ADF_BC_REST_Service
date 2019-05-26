@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="PeopleEO"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="people"
+  AliasName="PeopleEO"
+  BindingStyle="JDBC">
+  <Attribute
+    Name="PersonId"
+    IsNotNull="true"
+    ColumnName="person_id"
+    SQLType="INTEGER"
+    Type="java.lang.Integer"
+    ColumnType="INT"
+    TableName="people"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="PersonName"
+    IsNotNull="true"
+    Precision="50"
+    ColumnName="person_name"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR"
+    TableName="people">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="PersonEmail"
+    IsNotNull="true"
+    Precision="50"
+    ColumnName="person_email"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR"
+    TableName="people">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="PersonDesignation"
+    IsNotNull="true"
+    Precision="50"
+    ColumnName="person_designation"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR"
+    TableName="people">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="AssignmentsEO"
+    Association="RM.RESTmodel.entities.ProjectAssignmentRelationAssoc1"
+    AssociationEnd="RM.RESTmodel.entities.ProjectAssignmentRelationAssoc1.AssignmentsEO"
+    AssociationOtherEnd="RM.RESTmodel.entities.ProjectAssignmentRelationAssoc1.PeopleEO"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="AssignmentsEO1"
+    Association="RM.RESTmodel.entities.PeopleAssinmentRelationAssoc1"
+    AssociationEnd="RM.RESTmodel.entities.PeopleAssinmentRelationAssoc1.AssignmentsEO1"
+    AssociationOtherEnd="RM.RESTmodel.entities.PeopleAssinmentRelationAssoc1.PeopleEO1"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="ProjectsEO"
+    Association="RM.RESTmodel.entities.PmProjectRelaionAssoc1"
+    AssociationEnd="RM.RESTmodel.entities.PmProjectRelaionAssoc1.ProjectsEO"
+    AssociationOtherEnd="RM.RESTmodel.entities.PmProjectRelaionAssoc1.PeopleEO"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <Key
+    Name="Primary1"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="PRIMARY"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="RM.RESTmodel.entities.PeopleEO.PersonId"/>
+    </AttrArray>
+  </Key>
+</Entity>

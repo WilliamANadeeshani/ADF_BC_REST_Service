@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.9.14" id="ResourceRegistry"
+             SeparateXMLFiles="false" Package="RM.RESTmodel" ClientType="Generic">
+  <pageMap>
+    <page path="v1_Assignments" usageId="v1_RMAppModule_AssignmentsVOResources"/>
+    <page path="v1_People" usageId="v1_RMAppModule_PeopleVOResources"/>
+    <page path="v1_Projects" usageId="v1_RMAppModule_ProjectsVOResources"/>
+  </pageMap>
+  <dataControlUsages>
+    <BC4JDataControl id="RMAppModuleDataControl" Package="RM.RESTmodel.entities"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="RMAppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+  <pageDefinitionUsages>
+    <page id="v1_RMAppModule_AssignmentsVOResources"
+          path="RM.RESTmodel.entities.rest.v1.RMAppModule_AssignmentsVOResources"/>
+    <page id="v1_RMAppModule_PeopleVOResources" path="RM.RESTmodel.entities.rest.v1.RMAppModule_PeopleVOResources"/>
+    <page id="v1_RMAppModule_ProjectsVOResources" path="RM.RESTmodel.entities.rest.v1.RMAppModule_ProjectsVOResources"/>
+  </pageDefinitionUsages>
+</Application>

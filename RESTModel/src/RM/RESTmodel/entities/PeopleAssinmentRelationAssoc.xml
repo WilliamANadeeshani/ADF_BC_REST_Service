@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+<!---->
+<Association
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="PeopleAssinmentRelationAssoc"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <AssociationEnd
+    Name="PersonIdAssignmentsEO"
+    Cardinality="1"
+    Source="true"
+    Owner="RM.RESTmodel.entities.AssignmentsEO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_minCardinality" Value="1"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="PersonIdAssignmentsEO"/>
+      <Attr Name="_foreignKey" Value="RM.RESTmodel.entities.AssignmentsEO.Primary1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="RM.RESTmodel.entities.AssignmentsEO.AssignmentId"/>
+    </AttrArray>
+  </AssociationEnd>
+  <AssociationEnd
+    Name="AssignmentsEO1"
+    Cardinality="-1"
+    Owner="RM.RESTmodel.entities.AssignmentsEO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="AssignmentsEO1"/>
+      <Attr Name="_foreignKey" Value="RM.RESTmodel.entities.AssignmentsEO.PeopleAssinmentRelation"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="RM.RESTmodel.entities.AssignmentsEO.PersonId"/>
+    </AttrArray>
+  </AssociationEnd>
+</Association>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="AssignmentsEO"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="assignments"
+  AliasName="AssignmentsEO"
+  BindingStyle="JDBC">
+  <Attribute
+    Name="AssignmentId"
+    IsNotNull="true"
+    ColumnName="assignment_id"
+    SQLType="INTEGER"
+    Type="java.lang.Integer"
+    ColumnType="INT"
+    TableName="assignments"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ProjectId"
+    IsNotNull="true"
+    ColumnName="project_id"
+    SQLType="INTEGER"
+    Type="java.lang.Integer"
+    ColumnType="INT"
+    TableName="assignments">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="PersonId"
+    IsNotNull="true"
+    ColumnName="person_id"
+    SQLType="INTEGER"
+    Type="java.lang.Integer"
+    ColumnType="INT"
+    TableName="assignments">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="AssignmrntStartDate"
+    IsNotNull="true"
+    ColumnName="assignmrnt_start_date"
+    SQLType="DATE"
+    Type="java.sql.Date"
+    ColumnType="DATE"
+    TableName="assignments"/>
+  <Attribute
+    Name="AssignmentEndDate"
+    IsNotNull="true"
+    ColumnName="assignment_end_date"
+    SQLType="DATE"
+    Type="java.sql.Date"
+    ColumnType="DATE"
+    TableName="assignments"/>
+  <Attribute
+    Name="Billability"
+    IsNotNull="true"
+    ColumnName="Billability"
+    SQLType="BIT"
+    Type="java.lang.Boolean"
+    ColumnType="BIT"
+    TableName="assignments"/>
+  <AccessorAttribute
+    Name="AssignmentsEO"
+    Association="RM.RESTmodel.entities.ProjectAssignmentRelationAssoc"
+    AssociationEnd="RM.RESTmodel.entities.ProjectAssignmentRelationAssoc.AssignmentsEO"
+    AssociationOtherEnd="RM.RESTmodel.entities.ProjectAssignmentRelationAssoc.ProjectIdAssignmentsEO"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="ProjectIdAssignmentsEO"
+    Association="RM.RESTmodel.entities.ProjectAssignmentRelationAssoc"
+    AssociationEnd="RM.RESTmodel.entities.ProjectAssignmentRelationAssoc.ProjectIdAssignmentsEO"
+    AssociationOtherEnd="RM.RESTmodel.entities.ProjectAssignmentRelationAssoc.AssignmentsEO"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="AssignmentsEO1"
+    Association="RM.RESTmodel.entities.PeopleAssinmentRelationAssoc"
+    AssociationEnd="RM.RESTmodel.entities.PeopleAssinmentRelationAssoc.AssignmentsEO1"
+    AssociationOtherEnd="RM.RESTmodel.entities.PeopleAssinmentRelationAssoc.PersonIdAssignmentsEO"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="PersonIdAssignmentsEO"
+    Association="RM.RESTmodel.entities.PeopleAssinmentRelationAssoc"
+    AssociationEnd="RM.RESTmodel.entities.PeopleAssinmentRelationAssoc.PersonIdAssignmentsEO"
+    AssociationOtherEnd="RM.RESTmodel.entities.PeopleAssinmentRelationAssoc.AssignmentsEO1"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="PeopleEO"
+    Association="RM.RESTmodel.entities.ProjectAssignmentRelationAssoc1"
+    AssociationEnd="RM.RESTmodel.entities.ProjectAssignmentRelationAssoc1.PeopleEO"
+    AssociationOtherEnd="RM.RESTmodel.entities.ProjectAssignmentRelationAssoc1.AssignmentsEO"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="PeopleEO1"
+    Association="RM.RESTmodel.entities.PeopleAssinmentRelationAssoc1"
+    AssociationEnd="RM.RESTmodel.entities.PeopleAssinmentRelationAssoc1.PeopleEO1"
+    AssociationOtherEnd="RM.RESTmodel.entities.PeopleAssinmentRelationAssoc1.AssignmentsEO1"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="ProjectsEO"
+    Association="RM.RESTmodel.entities.ProjectAssignmentRelationAssoc2"
+    AssociationEnd="RM.RESTmodel.entities.ProjectAssignmentRelationAssoc2.ProjectsEO"
+    AssociationOtherEnd="RM.RESTmodel.entities.ProjectAssignmentRelationAssoc2.AssignmentsEO"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="ProjectsEO1"
+    Association="RM.RESTmodel.entities.PeopleAssinmentRelationAssoc2"
+    AssociationEnd="RM.RESTmodel.entities.PeopleAssinmentRelationAssoc2.ProjectsEO1"
+    AssociationOtherEnd="RM.RESTmodel.entities.PeopleAssinmentRelationAssoc2.AssignmentsEO1"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="ProjectsEO2"
+    Association="RM.RESTmodel.entities.PmProjectRelaionAssoc2"
+    AssociationEnd="RM.RESTmodel.entities.PmProjectRelaionAssoc2.ProjectsEO2"
+    AssociationOtherEnd="RM.RESTmodel.entities.PmProjectRelaionAssoc2.AssignmentsEO2"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <Key
+    Name="Primary1"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="PRIMARY"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="RM.RESTmodel.entities.AssignmentsEO.AssignmentId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="PeopleAssinmentRelation">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PRIMARY"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="people_assinment_relation"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="RM.RESTmodel.entities.AssignmentsEO.PersonId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="ProjectAssignmentRelation">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PRIMARY"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="project_assignment_relation"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="RM.RESTmodel.entities.AssignmentsEO.ProjectId"/>
+    </AttrArray>
+  </Key>
+</Entity>
